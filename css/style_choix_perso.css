@@ -1,0 +1,135 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'HeinzHeinrich';
+    src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot');
+    src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.woff') format('woff'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.ttf') format('truetype'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.svg#HeinzHeinrich') format('svg');
+}
+
+@font-face {
+    font-family: 'Pixel Operator 8 Bold';
+    src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot');
+    src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.woff') format('woff'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.ttf') format('truetype'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.svg#') format('svg');
+}
+
+body {
+    font-family: 'Pixel Operator 8';
+    font-weight: lighter;
+    font-size: 10px;
+    color: #666;
+    background: #f4f4f4;
+    line-height: 200%;
+}
+
+a {color: #fff;}
+
+::selection {background: rgba(0,0,0, 0.5);}
+
+strong {
+    font-family: 'Pixel Operator 8 Bold';
+}
+
+h1 {
+    font-family: 'HeinzHeinrich';
+    font-size: 20px;
+    padding: 70px 0 50px 0;
+    text-align: center;
+}
+
+#texte_centrage a{
+    color: #000000;
+    font-size: 1.4em;
+}
+
+p {
+    text-align: center;
+}
+
+#personnage{
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.06);
+    margin: 30px auto;
+    width: 805px;
+}
+
+.Haniel_Asmodeus1{
+    width: 400px;
+    height: 470px;
+    padding-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    transition: .5s;
+}
+
+.Haniel_Asmodeus1:hover, .Haniel_Asmodeus2:hover {
+    opacity: 0.5;
+}
+
+.Haniel_Asmodeus2{
+    padding-top: 20px;
+    width: 400px;
+    height: 470px;
+    display: inline-block;
+    vertical-align: top;
+    background: #f4f4f4;
+    transition: .5s;
+}
+
+.Haniel_Asmodeus1 h2, .Haniel_Asmodeus2 h2{
+    text-align: center;
+    font-family: 'Pixel Operator 8 Bold';
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+.Haniel_Asmodeus1 h2{
+    color: #eaa903;
+}
+
+.Haniel_Asmodeus1 .paragraphe_2{
+    color: #eaa903;
+}
+
+.mini_text{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Pixel Operator 8';
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.Haniel_Asmodeus1 img{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 200px;
+    margin: 40px auto;
+}
+
+.Haniel_Asmodeus2 img{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 200px;
+    margin: 40px auto;
+}
+
+.paragraphe_2{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Pixel Operator 8 Bold', Arial;
+    font-size: 10px;
+}
+
+.last_text{
+    margin: 0 auto 50px auto;
+    font-family: 'Pixel Operator 8';
+}

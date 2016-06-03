@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>The Creator Test</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style_jeu_2.css">
+	</head>
+
+	<body>	
+	<div id="texte_centrage">
+            <h1><a href="/">The Creator</a></h1>
+            <p class="paragraphe_1">You choose to be the wise Haniel. Asmodeus destroyed everything in the world and there's<br/>
+                nothing left. It is your mission as an Angel of the creation to rebuilt everything. Now<br/>
+                you're god it's your duty to create. Good luck on your mission !
+            </div>
+	
+		<div id="stage">
+			<div id="character"></div>
+			<canvas id="map"></canvas> <!-- La balise canvas est la racine du reste du code-->
+			<div id="dialogue">
+				<p class="text_dialogue"></p>
+				<!--<img src="img/arrow_down.png" alt="arrow_down" id="img_arrowDown">-->
+			</div>
+		</div>
+		
+		<!-- Canvas pour diriger le personnage -->
+		<script src="js/parameter.js"></script>
+		<script src="js/keyboard.js"></script>
+		<script src="js/sprite.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/jquery.js"></script>	
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Pour se charger des déplacement du perso -->
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				//Chargement du personnage avec l'ajout d'une classe
+				$('#character').addClass('front-stand');
+
+			});
+
+			//queue permet de mettre en attente des fonctions avant de les exécuter
+			//currentkey = lorsqu'une touche est appuyé
+			//Keycode = correspond au code associé de base à chacune des touches
+			$(document).keydown(function(e) {
+				if (!currentKey && $('#character').queue("fx").length == 0 && $('#map').queue("fx").length == 0) {
+					currentKey = e.keyCode;
+					switch(e.keyCode) {
+						case 38: deplacementPerso('up');    break;
+						case 39: deplacementPerso('right'); break;
+						case 40: deplacementPerso('down');  break;
+						case 37: deplacementPerso('left');  break;
+					} 
+					
+				  }
+				if(deplacementPerso) {//Empêche le défilement mais l'utilsation d'autre touche sur la page
+					return false;				
+				}
+			});
+
+			$(document).keyup(function(e) {
+				// La marche n'est pas arrêté si le joueur presse les autres touches
+				// La marche s'arrête à la fin de la pression
+				if (e.keyCode == currentKey) {
+					currentKey = false;
+				}
+			});
+		</script>
+            
+            <div id="texte_centrage">
+            <div id="menu_utilisateur">
+                <ul class="caroussel">
+					<li class="competences"><img src="img/competence_1.png" class="img_competence" id="img_competence_1" alt="competence_1"><p>Maison</p></li>
+					<li class="competences"><img src="img/competence_2.png" class="img_competence" id="img_competence_2" alt="competence_2"><p>Fleur</p></li>
+					<li class="competences"><img src="img/competence_3.png" class="img_competence" id="img_competence_3" alt="competence_3"><p>Feu</p></li>
+					<li class="competences"><img src="img/competence_4.png" class="img_competence" id="img_competence_4" alt="competence_4"><p>Eau</p></li>
+					<li class="competences"><img src="img/competence_5.png" class="img_competence" id="img_competence_5" alt="competence_5"><p>Electricité</p></li>
+					<li class="competences"><img src="img/competence_6.png" class="img_competence" id="img_competence_6" alt="competence_6"><p>Herbe</p></li>
+					<li class="competences"><img src="img/competence_7.png" class="img_competence" id="img_competence_7" alt="competence_7"><p>Arbre</p></li>
+					<li class="competences"><img src="img/competence_8.png" class="img_competence" id="img_competence_8" alt="competence_8"><p>Rocher</p></li>
+					<li class="competences"><img src="img/competence_9.png" class="img_competence" id="img_competence_9" alt="competence_9"><p>Volcan</p></li>
+				</ul>
+            </div>
+        </div>
+
+		<audio src="audio/musique_4.mp3" autoplay></audio>
+
+		<!-- Allez Générons la map manuellement -->
+		<script type="text/javascript" src="js/generation_map.js"></script>
+
+		<!-- Dialogue -->
+		<script type="text/javascript" src="js_dialogue/dialogue_2.js"></script>
+		
+		<script type="text/javascript" src="js/drag_element.js"></script>
+		<script type="text/javascript" src="js/competence.js"></script>
+
+		
+	</body> <!-- C'est la fin du body -->
+</html>

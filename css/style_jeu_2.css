@@ -1,0 +1,243 @@
+#character {
+    position: absolute;
+	top: 252px; /* Position en x */
+    left: 288px; /* Position en y*/
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+    background: url("../spritesheets/asmodeus.png");
+}
+
+#stage {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 6px 1px #C7C7C7;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    /*background: url('../tilesets/map.jpg') no-repeat 0px 0px;*/
+}
+
+/********************** Boite de dialogue affichÃƒÂ© en JS **********************/
+#dialogue{
+    position: relative;
+    top: 335px;
+    z-index: 5;
+    height: 40px;
+    padding: 20px;
+    width: 70%;
+    color: #938D58;
+    line-height: 18px;
+    background: #fbfbe3; /* Old browsers */
+    background: -moz-linear-gradient(top, #fbfbe3 0%, #d3d5af 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fbfbe3 0%,#d3d5af 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fbfbe3 0%,#d3d5af 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbe3', endColorstr='#d3d5af',GradientType=0 );
+    border: 2px solid #C3B58C;
+    margin: auto;
+    border-radius: 7px;
+}
+
+#dialogue p{
+    font-family: 'Pixel Operator 8';
+    font-size: 12px;
+    /*display: none;*/
+}
+
+img[src*="img/arrow_down.png"]{
+    width: 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+#character.front-right { background-position: 0px 0px; }
+#character.front-stand { background-position: -32px 0px; }
+#character.front-left { background-position: -64px 0px; }
+
+#character.left-right { background-position: 0px -32px; }
+#character.left-stand { background-position: -32px -32px; }
+#character.left-left { background-position: -64px -32px; }
+
+#character.right-right { background-position: -64px -64px; }
+#character.right-stand { background-position: -32px -64px; }
+#character.right-left { background-position: -0px -64px; }
+
+#character.back-right { background-position: 0px -96px; }
+#character.back-stand { background-position: -32px -96px; }
+#character.back-left { background-position: -64px -96px; }
+
+#menu_competence{
+    border: 1px solid black;
+    width: 150px;
+    height: 400px;
+    position: absolute;
+}
+
+
+#stage.border{
+    border-width: 5px;
+}
+
+
+/* Contenue page Jeu */
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'HeinzHeinrich';
+    src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot');
+    src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.woff') format('woff'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.ttf') format('truetype'),
+    url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.svg#HeinzHeinrich') format('svg');
+}
+
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url('../fonts/PixelOperator/pixeloperator-webfont.eot');
+    src: url('../fonts/PixelOperator/pixeloperator-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PixelOperator/pixeloperator-webfont.woff') format('woff'),
+    url('../fonts/PixelOperator/pixeloperator-webfont.ttf') format('truetype'),
+    url('../fonts/PixelOperator/pixeloperator-webfont.svg#Pixel Operator') format('svg');
+}
+
+@font-face {
+    font-family: 'Pixel Operator 8';
+    src: url('../fonts/PixelOperator8/pixeloperator8-webfont.eot');
+    src: url('../fonts/PixelOperator8/pixeloperator8-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PixelOperator8/pixeloperator8-webfont.woff') format('woff'),
+    url('../fonts/PixelOperator8/pixeloperator8-webfont.ttf') format('truetype'),
+    url('../fonts/PixelOperator8/pixeloperator8-webfont.svg#Pixel Operator 8') format('svg');
+}
+
+@font-face {
+    font-family: 'Pixel Operator 8 Bold';
+    src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot');
+    src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.woff') format('woff'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.ttf') format('truetype'),
+    url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.svg#') format('svg');
+}
+
+@font-face {
+    font-family: 'Pixel Operator Bold';
+    src: url('../fonts/PixelOperatorBold/pixeloperator-bold-webfont.eot');
+    src: url('../fonts/PixelOperatorBold/pixeloperator-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PixelOperatorBold/pixeloperator-bold-webfont.woff') format('woff'),
+    url('../fonts/PixelOperatorBold/pixeloperator-bold-webfont.ttf') format('truetype'),
+    url('../fonts/PixelOperatorBold/pixeloperator-bold-webfont.svg#Pixel Operator Bold') format('svg');
+}
+
+body{
+    background: #f4f4f4;
+    font-size: 10px;
+    line-height: 200%;
+}
+
+#texte_centrage{
+    width: 1190px;
+    margin: auto;
+}
+
+#texte_centrage h1
+{
+    font-family: 'HeinzHeinrich';
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#texte_centrage a{
+    color: #000000;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+.paragraphe_1{
+    text-align: center;
+    font-family: 'Pixel Operator 8';
+    padding-bottom: 30px;
+}
+
+#personnage{
+    box-shadow: 1px 1px 6px 1px #C7C7C7;
+    margin-top: 40px;
+    height: 550px;
+}
+
+#menu_utilisateur {
+    text-align: center;
+    width: 800px;
+    margin: 30px auto;
+}
+
+#menu_utilisateur ul li{
+    display: table-cell;
+    padding: 0px;
+    text-align: center;
+}
+
+#menu_utilisateur li img{
+    margin-top: 20px;
+}
+
+#menu_utilisateur li p{
+    font-family: 'Pixel Operator 8', Arial;
+}
+
+.img_competence {
+    width: 32px;
+    /*height: 32px;*/
+}
+
+.last_text{
+    text-align: right;
+    font-family: 'Pixel Operator 8';
+    margin-top: 20px;
+}
+
+span{
+    font-weight: bold;
+}
+
+.competences {
+    width: 70px;
+    height: 50px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.caroussel{
+    display: inline-block;
+}
+
+.fleche{
+    width: 20px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 52px;
+}
+
+.textMenuDialogue{
+    text-decoration: none;
+    color: black;
+    margin-left: 120px;
+}
+
+.textMenuDialogue:first-child{
+    margin-left: inherit;
+}
+
+.textMenuDialogue:hover{
+    text-decoration: underline;
+}

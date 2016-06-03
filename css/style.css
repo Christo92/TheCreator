@@ -1,0 +1,226 @@
+/* FONTS */
+
+@font-face {
+	font-family: 'HeinzHeinrich';
+	src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot');
+	src: url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.woff') format('woff'),
+	url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.ttf') format('truetype'),
+	url('../fonts/HeinzHeinrich-Regular/heinzheinrich-regular-webfont.svg#HeinzHeinrich') format('svg');
+}
+
+@font-face {
+	font-family: 'Pixel Operator 8';
+	src: url('../fonts/PixelOperator8/pixeloperator8-webfont.eot');
+	src: url('../fonts/PixelOperator8/pixeloperator8-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PixelOperator8/pixeloperator8-webfont.woff') format('woff'),
+	url('../fonts/PixelOperator8/pixeloperator8-webfont.ttf') format('truetype'),
+	url('../fonts/PixelOperator8/pixeloperator8-webfont.svg#Pixel Operator 8') format('svg');
+}
+
+@font-face {
+	font-family: 'Pixel Operator 8 Bold';
+	src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot');
+	src: url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.woff') format('woff'),
+	url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.ttf') format('truetype'),
+	url('../fonts/PixelOperator8Bold/pixeloperator8-bold-webfont.svg#') format('svg');
+	font-weight: bold;
+}
+
+/* BASE */
+
+body {
+	font-family: 'Pixel Operator 8';
+	font-weight: lighter;
+	font-size: 10px;
+	color: #666;
+	background: #fff;
+	line-height: 200%;
+}
+
+a {color: #fff;}
+
+::selection {background: rgba(0,0,0, 0.5);}
+
+strong {
+	font-family: 'Pixel Operator 8 Bold';
+}
+
+h1 {
+	font-family: 'HeinzHeinrich';
+	font-size: 20px;
+	padding: 70px 0 50px 0;
+}
+
+h2 {
+	margin: 0 auto 40px auto;
+	padding: 40px 0 40px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	width: 400px;
+}
+
+h2, h3 {
+	text-transform: uppercase;
+	font-family: 'Pixel Operator 8 Bold';
+}
+
+p {
+    font-size: 10px;    
+    line-height: 200%;
+    margin: 0 0 30px 0;
+}
+
+/***** INTRODUCTION *****/
+
+#intro {
+    color: #fff;
+    background: #4a4a4a url(../img/background.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0,0,0, 0.5);
+    margin: auto;
+}
+
+nav {margin: 0 0 60px 0;}
+
+nav ul li a{
+	color: #ffffff;
+	font-size: 12px;
+}
+
+#intro li {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 15px;
+}
+
+a.ready_link {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.ready_link {
+}
+
+/***** STORY *****/
+
+.story {
+	background: #fff;
+	text-align: center;
+	padding: 70px;
+}
+
+/***** NEWS ASMODEUS CHARACTER *****/
+
+#story_asmodeus {
+	background: #f4f4f4;
+	text-align: center;
+	padding: 100px;
+}
+
+
+#asmodeus {
+	float: left;
+	height: 360px;
+	margin-top: 50px; 
+}
+
+/***** CHARACTERS *****/
+
+#story_haniel {
+	background: #fff;
+	text-align: center;
+	padding: 100px 170px;
+}
+
+#story_haniel p,
+#story_asmodeus p
+{text-align: left;}
+
+#haniel {
+	float: left;
+	height: 360px;
+}
+
+#story_haniel h3, #story_asmodeus h3 {
+	font-size: 16px;
+	font-family: 'Pixel Operator 8 Bold';
+	color: #3f3f3f;
+	text-align: left;
+}
+
+.sub {
+	position: relative;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-align: left;
+	margin: 0 0 20px 0;
+}
+
+/***** TEAM *****/
+
+#team {
+	background: #f4f4f4;
+	text-align: center;
+	padding: 70px 0;
+}
+
+
+#team li {
+    width: 140px;
+    margin: 0 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.chara {
+	height: 136px;
+	margin: 25px 0;
+}
+
+/***** PICTURES *****/
+
+#pictures {
+	background: #fff;
+	text-align: center;
+	padding: 70px 0;
+}
+
+.gallery ul li{
+	display: inline-block;
+}
+
+.img_polaroid{
+	margin: 10px;
+	width: 270px;
+	height: 165px;
+}
+
+/***** FOOTER *****/
+
+#copyright {
+	background: #f4f4f4;
+	margin: 0 auto;
+	font-size: 8px;
+    padding: 30px 40px 0 40px;
+}
+
+#copyright a {color: #666;}
+
+.footer_li {display: inline-block; width: 175px;}
+
+.disclaimer {
+	display: inline-block;
+	width: 250px;
+	margin: 0 100px 0 0;
+}
+
+.last {width: 310px;}
+
+.footer_li:last-child {text-align: right;}
